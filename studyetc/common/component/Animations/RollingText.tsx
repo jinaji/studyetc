@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { AlignedRow, Column } from "../../common/component/Layout/Row";
-import { Text } from "../../common/component/Text/Text";
-import { Animation } from "../../common/component/Animations/Animation";
+import { AlignedRow } from "../Layout/Row";
+import { Animation } from "./Animation";
 
 const TextContainer = styled.span<{ upDown: number }>`
   @keyframes moveText {
@@ -28,7 +27,7 @@ const TextContainer = styled.span<{ upDown: number }>`
   overflow: hidden;
 `;
 
-export const TextAnimationComponent = () => {
+export const RollingText = () => {
   const [text, setText] = useState("");
 
   return (
@@ -61,14 +60,5 @@ export const TextAnimationComponent = () => {
         "띄어쓰기 안 보이고 한글은 글자 변동 있을 때마다 (자음 + 모음 + 자음 ...) 계속 변동 "
       }
     />
-    // <Column style={{ gap: 10 }}>
-    //   {/* Title */}
-    //   <Text size={30} text={"Rolling Text"} />
-    //
-    //   {/* 구현 */}
-    //
-    //
-    //   {/* 설명 */}
-    // </Column>
   );
 };

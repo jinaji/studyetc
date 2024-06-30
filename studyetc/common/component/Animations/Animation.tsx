@@ -15,20 +15,21 @@ const Container = styled(Column)`
 
 const Title = ({ title }: { title: string }) => <Text text={title} size={30} />;
 
-const Description = ({ description }: { description?: string }) => (
-  <Text
-    text={description}
-    size={15}
-    preLine
-    color={"#666666"}
-    style={{
-      padding: 10,
-      borderRadius: 10,
-      backgroundColor: "white",
-      opacity: 0.8,
-    }}
-  />
-);
+const Description = ({ description }: { description?: string }) =>
+  description ? (
+    <Text
+      text={description}
+      size={15}
+      preLine
+      color={"#666666"}
+      style={{
+        padding: 10,
+        borderRadius: 10,
+        backgroundColor: "white",
+        opacity: 0.8,
+      }}
+    />
+  ) : null;
 
 export const Animation = ({
   title,

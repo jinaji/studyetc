@@ -1,17 +1,18 @@
 import React from "react";
-import { Column } from "../../../common/component/Layout/Row";
-import { Text } from "../../../common/component/Text/Text";
+import { Column, Row } from "../../../common/component/Layout/Row";
+import { RollingText } from "../../../common/component/Animations/RollingText";
+import { DropDown } from "../../../common/component/Animations/Dropdown";
 import styled from "styled-components";
-import { TextAnimationComponent } from "@/pages/TextAnimationComponent";
 
-const AnimationContainer = styled(Column)``;
+const Container = styled(Row)`
+  gap: 20px;
+`;
 
 const AnimationsPage = () => (
-  <Column>
-    <AnimationContainer>
-      <TextAnimationComponent />
-    </AnimationContainer>
-  </Column>
+  <Container>
+    <RollingText />
+    <DropDown />
+  </Container>
 );
 
 export default AnimationsPage;

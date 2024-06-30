@@ -1,4 +1,4 @@
-import { CSSProperties, PropsWithChildren } from "react";
+import React, { CSSProperties, PropsWithChildren } from "react";
 
 export const Text = ({
   text,
